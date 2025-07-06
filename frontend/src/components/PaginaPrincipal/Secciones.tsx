@@ -1,25 +1,27 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaRobot, FaListUl, FaChartBar, FaCog } from 'react-icons/fa';
+import { GoChecklist } from "react-icons/go";
+import { MdOutlineVolunteerActivism } from "react-icons/md";
 
 const Secciones = () => {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const sections = [
     {
-      title: 'Crear Chatbot',
-      description: 'Configura un nuevo chatbot personalizado.',
-      path: '/crear-chatbot',
+      title: 'Crear Actividades',
+      description: 'Crea diferentes actividades, trabajos en clase y tareas.',
+      path: '/crear-actividades',
       color: 'bg-indigo-600',
-      icon: <FaRobot size={28} />,
+      icon: <MdOutlineVolunteerActivism size={28} />,
       badge: 'Nuevo',
     },
     {
-      title: 'Lista de Chatbots',
-      description: 'Visualiza, edita o elimina tus chatbots.',
+      title: 'Creacion de Tests',
+      description: 'Genera partes concretas o test completos.',
       path: '/chatbots',
       color: 'bg-blue-600',
-      icon: <FaListUl size={28} />,
+      icon: <GoChecklist size={28} />,
     },
     {
       title: 'Reportes',
@@ -63,7 +65,7 @@ const Secciones = () => {
 
             {/* Botón */}
             <button
-              //onClick={() => navigate(section.path)}
+              onClick={() => navigate(section.path)}
               className="mt-auto bg-white text-black text-sm px-4 py-1.5 rounded-md font-semibold hover:bg-gray-200 transition"
             >
               Ir →
